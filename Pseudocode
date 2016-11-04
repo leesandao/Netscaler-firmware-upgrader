@@ -1,0 +1,47 @@
+check input number
+
+search in target Netscaler /var/nsinstall directory 
+
+if target directory exist
+
+   check in the directory if it has been extract
+
+         if extracted
+
+              execute command "installns" in the directory
+
+              execute command "N" after 5 seconds
+
+              execute command "No" after another 5 seconds
+
+              execute command "Y" after 1 minutes
+
+         if not extracted
+           
+              execute command "tar xvzf $var"
+
+         then jump back to if extracted 
+
+if target directory not exist
+
+    check local directory if target firmware exist
+        
+           if not existed
+
+                print "No such firmware, please download from Citrix"
+
+           if existed
+
+                use SSH to login target Netscaler with nsroot
+
+                mkdir with firmware name $var under /var/nsinstall
+
+                use SFTP upload to target Netscaler /var/nsinstall/$var
+
+                extract tar.gz file to directory
+
+            jump back to if extracted
+
+Return
+
+              
