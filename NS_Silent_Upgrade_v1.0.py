@@ -4,7 +4,7 @@ Created on Tue Aug 25 15:49:30 2017 CST
 
 author: Raynor Li
 
-NetScaler Appliance Slient Upgrade Script
+NetScaler Appliance Silent Upgrade Script
 """
 
 import paramiko
